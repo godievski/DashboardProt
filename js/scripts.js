@@ -33,14 +33,4 @@ function init(){
 			$wrapper.css("margin-left","0px");
 		}
 	}
-
-	/*CHARTS*/
-	var chartOne = new Morris.Donut({
-	  element: 'chartOne',
-	  data: [
-	    { label: 'In Use', value: 23.40 },
-	    { label: 'Free', value: 76.60 },
-	  ],
-	  formatter: function(x){return x+"%"}
-	});
 }
