@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<!-- fonts-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/morris.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -34,7 +36,7 @@
 			</li>
 		</ul>
 	</div>
-	<main class="content-main">
+	<main class="wrapper">
 		<div class="menu_top">
 			<ul class="menu_wrap-top">
 				<li class="menu_top-item">
@@ -65,10 +67,125 @@
 				</li>
 			</ul>
 		</div>
-
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="container-item col-lg-3 col-sm-6">
+					<div class="c-item-wrap">
+						<div class="c-item-header">
+							<div class="cih-title">
+								<h3>CPU 1</h3>
+							</div>
+							<div class="cih-close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div id="chartOne" class="c-item-chart"></div>
+					</div>
+				</div>
+				<div class="container-item col-lg-3 col-sm-6">
+					<div class="c-item-wrap">
+						<div class="c-item-header">
+							<div class="cih-title">
+								<h3>CPU 2</h3>
+							</div>
+							<div class="cih-close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-item col-lg-3 col-sm-6">
+					<div class="c-item-wrap">
+						<div class="c-item-header">
+							<div class="cih-title">
+								<h3>CPU 3</h3>
+							</div>
+							<div class="cih-close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-item col-lg-3 col-sm-6">
+					<div class="c-item-wrap">
+						<div class="c-item-header">
+							<div class="cih-title">
+								<h3>CPU 4</h3>
+							</div>
+							<div class="cih-close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-item col-lg-4 col-sm-6">
+					<div class="c-item-wrap">
+						<div class="c-item-header">
+							<div class="cih-title">
+								<h3>Some bars 1</h3>
+							</div>
+							<div class="cih-close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-item col-lg-4 col-sm-6">
+					<div class="c-item-wrap">
+						<div class="c-item-header">
+							<div class="cih-title">
+								<h3>Some bars 2</h3>
+							</div>
+							<div class="cih-close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-item col-lg-4 col-sm-6">
+					<div class="c-item-wrap">
+						<div class="c-item-header">
+							<div class="cih-title">
+								<h3>Some bars 3</h3>
+							</div>
+							<div class="cih-close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-item col-lg-6 col-sm-12">
+					<div class="c-item-wrap">
+						<div class="c-item-header">
+							<div class="cih-title">
+								<h3>CPU 1</h3>
+							</div>
+							<div class="cih-close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-item col-lg-6 col-sm-12">
+					<div class="c-item-wrap">
+						<div class="c-item-header">
+							<div class="cih-title">
+								<h3>CPU 1</h3>
+							</div>
+							<div class="cih-close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="js/raphael.min.js"></script>
+	<script type="text/javascript" src="js/morris.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
