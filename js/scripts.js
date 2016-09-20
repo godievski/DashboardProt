@@ -33,4 +33,39 @@ function init(){
 			$wrapper.css("margin-left","0px");
 		}
 	}
+	
+	/*OPEN & CLOSE MINI-WINDOWS*/
+	var $closeButtons = $(".menu-close");
+	$closeButtons.show();
+	$closeButtons.on("click",menuCloseWindow);
+	var $openButtons = $(".menu-open");
+	$openButtons.hide();
+	$openButtons.on("click",menuOpenWindow);
+
+	function menuCloseWindow(){
+		var idWindow = $(this).data("window");
+		var openButton = $(this).next();
+		$("#"+idWindow).hide();
+		$(this).hide();
+		openButton.show();
+	}
+	function menuOpenWindow(){
+		var closeButton =$(this).prev();
+		var idWindow = closeButton.data("window");
+		$("#"+idWindow).show();
+		$(this).hide();
+		closeButton.show();
+	}
+
+	var $closeButtonWindow = $(".cih-close");
+	$closeButtonWindow.on("click",selfClose);
+	function selfClose(){
+		var idItem = $(this).data("li");
+		var idWindow = $(this).data("window");
+		$("#"+idWindow).hide();
+		var item = $("#"+idItem);
+		$(item.children()[1]).hide();
+		$(item.children()[2]).show();
+	}
+	/*END*/
 }
