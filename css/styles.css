@@ -43,23 +43,26 @@ table {
 	border-spacing: 0;
 }
 
-
 .box-center{
 	margin: 0 auto;
 	max-width: 1230px;
 	position: relative;
 }
 
+@font-face{
+	font-family: 'HelveticaNeueLTStd';
+	src: url(./lib/fonts/HelveticaNeueLTStd.woff);
+}
 
 /*Base*/
 *{
 	box-sizing: border-box;
-	font-family: Roboto,sans-serif
 	outline: none;
-	font-weight: lighter;
 }
 
 body{
+	font-family: 'HelveticaNeueLTStd',sans-serif;
+	font-size: 14px;
 	margin: 0px;
 	padding: 0px;
 }
@@ -153,12 +156,15 @@ img{
 				background-color: rgba(0,0,0,0.25);
 			}
 			.menu_left-option li i{
-				border-width: 1px;
 				padding: 0 2px;
-				border-style: solid;
-				border-color: #fffeff;
 				cursor: pointer;
 				align-content: middle;
+			}
+			.menu-close{
+				display: none;
+			}
+			.menu-open{
+				display: none;
 			}
 			.menu-close:hover{
 				opacity: 0.7;
@@ -166,6 +172,10 @@ img{
 			.menu-open:hover{
 				opacity: 0.7;	
 			}
+			.item_background{
+				position: relative;
+			}
+
 			/**/
 
 .wrapper{
@@ -253,6 +263,7 @@ img{
 .container-item{
 	height: 280px;
 	padding: 10px;
+	transition: transform 600ms;
 }
 .c-item-wrap{
 	width: 100%;

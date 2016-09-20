@@ -45,14 +45,20 @@ function init(){
 	function menuCloseWindow(){
 		var idWindow = $(this).data("window");
 		var openButton = $(this).next();
-		$("#"+idWindow).hide();
+		var $window = $("#"+idWindow);
+		$window.css("transform","scale(0)");
+		setTimeout(function(){
+    	$("#"+idWindow).hide();
+		}, 600);
 		$(this).hide();
 		openButton.show();
 	}
 	function menuOpenWindow(){
 		var closeButton =$(this).prev();
 		var idWindow = closeButton.data("window");
-		$("#"+idWindow).show();
+		var $window = $("#"+idWindow);
+		$window.show();
+		$window.css("transform","scale(1)");
 		$(this).hide();
 		closeButton.show();
 	}
@@ -62,7 +68,11 @@ function init(){
 	function selfClose(){
 		var idItem = $(this).data("li");
 		var idWindow = $(this).data("window");
-		$("#"+idWindow).hide();
+		var $window = $("#"+idWindow);
+		$window.css("transform","scale(0)");
+		setTimeout(function(){
+    	$("#"+idWindow).hide();
+		}, 600);
 		var item = $("#"+idItem);
 		$(item.children()[1]).hide();
 		$(item.children()[2]).show();
