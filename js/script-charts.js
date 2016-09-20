@@ -77,4 +77,41 @@ function init(){
 		return x;
 	}
 	
+
+
+	/*SET ID MENU-SUBITEM AND DATA-WINDOW*/
+	var menuLeftItems = $(".menu_left-item");
+	for(var i = 0; i < menuLeftItems.length; i++){
+		var  subItems= $(menuLeftItems[i]).find("li");
+		for(var j = 0; j < subItems.length; j++){
+			var subItemLi = $(subItems[j]);
+			subItemLi.attr("id",createIdSubItem(i,j));
+			try{
+				var buttonsI = $(subItemLi).find("i");
+				buttonsI.attr("data-window",createIdWindow(i,j));
+			} catch(err){}
+		}
+	}
+	function createIdSubItem(i,j){
+		return "id","item" + i.toString() + "_" + j.toString();
+	}
+	function createIdWindow(i,j){
+		return "window" + i.toString() + "_" + j.toString();
+	}
+
+	var miniWindows = $(".container-fluid .row .container-item");
+	/*PAGE DASHBOARD ID: 0*/
+	console.log(miniWindows.length)
+	for(var i = 0; i < miniWindows.length; i++){
+		var miniW = $(miniWindows[i]);
+		miniW.attr("id",createIdWindow(0,i));
+		try{
+			var closeButton = miniW.find(".cih-close");
+			console.log(closeButton);
+			closeButton.attr({
+				"data-window":createIdWindow(0,i),
+				"data-menu": createIdSubItem(0,i)
+			});
+		}catch(err){}
+	}
 }

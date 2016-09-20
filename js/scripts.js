@@ -49,13 +49,13 @@ function init(){
 		$window.css("transform","scale(0)");
 		setTimeout(function(){
     	$("#"+idWindow).hide();
-		}, 600);
+		}, 600);	
 		$(this).hide();
 		openButton.show();
 	}
 	function menuOpenWindow(){
+		var idWindow = $(this).data("window");
 		var closeButton =$(this).prev();
-		var idWindow = closeButton.data("window");
 		var $window = $("#"+idWindow);
 		$window.show();
 		$window.css("transform","scale(1)");
@@ -66,7 +66,7 @@ function init(){
 	var $closeButtonWindow = $(".cih-close");
 	$closeButtonWindow.on("click",selfClose);
 	function selfClose(){
-		var idItem = $(this).data("li");
+		var idItem = $(this).data("menu");
 		var idWindow = $(this).data("window");
 		var $window = $("#"+idWindow);
 		$window.css("transform","scale(0)");
