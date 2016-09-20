@@ -1,3 +1,4 @@
 Dashboard Prototype
 
-Font: Need to change
+Need to change how mini-window are organized.
+
