@@ -109,7 +109,7 @@ function init(){
 			var closeButton = miniW.find(".cih-close");
 			console.log(closeButton);
 			closeButton.attr({
-				"data-window":createIdWindow(0,i),
+				"data-wizndow":createIdWindow(0,i),
 				"data-menu": createIdSubItem(0,i)
 			});
 		}catch(err){}
