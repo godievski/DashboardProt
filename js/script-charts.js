@@ -101,15 +101,13 @@ function init(){
 
 	var miniWindows = $(".container-fluid .row .container-item");
 	/*PAGE DASHBOARD ID: 0*/
-	console.log(miniWindows.length)
 	for(var i = 0; i < miniWindows.length; i++){
 		var miniW = $(miniWindows[i]);
 		miniW.attr("id",createIdWindow(0,i));
 		try{
 			var closeButton = miniW.find(".cih-close");
-			console.log(closeButton);
 			closeButton.attr({
-				"data-wizndow":createIdWindow(0,i),
+				"data-window":createIdWindow(0,i),
 				"data-menu": createIdSubItem(0,i)
 			});
 		}catch(err){}
