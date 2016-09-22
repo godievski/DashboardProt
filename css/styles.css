@@ -81,7 +81,7 @@ img{
 	top: 0px;
 	left: 0px;
 	padding-top: 49px; /*DEPPENDS OF MENU_TOP*/
-	background-color: #35485f;
+	background-color: #3d5675;
 	width: 250px;
 	height: 100vh;
 	color: #fffeff;
@@ -149,7 +149,7 @@ img{
 			TODO: Rethink this part
 			*/
 			.menu_left-option li:hover{
-				background-color: rgba(0,0,0,0.25);
+				background-color: #3d5675;
 			}
 			.menu_left-option li i{
 				padding: 0 2px;
@@ -271,7 +271,7 @@ img{
 	box-shadow: 0 0 7px -2px;
 }
 .c-item-header{
-	background-color: #45699e;
+	background-color: #3d5675;
 	border-radius: 4px 4px 0 0;	
 	display: flex;
 	justify-content: space-between;
